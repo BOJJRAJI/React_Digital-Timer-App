@@ -1,240 +1,138 @@
-.app-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.bg-container {
   min-height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    #ffffff,
-    #cffcf1,
-    #cffcf1,
-    #defafe
-  );
-}
-
-@media screen and (min-width: 768px) {
-  .app-container {
-    background-image: linear-gradient(
-      to right,
-      #ffffff,
-      #cffcf1,
-      #cffcf1,
-      #defafe
-    );
-  }
-}
-
-.heading {
-  color: #0f172a;
-  font-family: 'Roboto';
-  font-size: 32px;
-  font-weight: 500;
-}
-
-@media screen and (min-width: 768px) {
-  .heading {
-    font-size: 48px;
-  }
-}
-
-.digital-timer-container {
+  background-image: linear-gradient(#ffffff, #cffcf1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
-}
-
-@media screen and (min-width: 768px) {
-  .digital-timer-container {
-    flex-direction: row;
-    max-width: 1140px;
-  }
-}
-
-.timer-display-container {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  width: 320px;
-  height: 250px;
+  padding-top: 20px;
+  box-shadow: 0px 4px 16px 0px #bfbfbf;
+}
+.heading {
+  font-size: 30px;
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: #0f172a;
+}
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+}
+.timer-bg-container {
+  width: 50%;
   background-image: url('https://assets.ccbp.in/frontend/react-js/digital-timer-elapsed-bg.png');
   background-size: cover;
+  height: 400px;
   background-position: center;
-}
-
-@media (min-width: 576px) {
-  .timer-display-container {
-    width: 450px;
-    height: 320px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .timer-display-container {
-    width: 600px;
-    height: 450px;
-  }
-}
-
-@media (min-width: 992px) {
-  .timer-display-container {
-    width: 600px;
-    height: 600px;
-  }
-}
-
-.elapsed-time-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+  justify-content: center;
 }
-
-@media (min-width: 576px) {
-  .elapsed-time-container {
-    width: 150px;
-    height: 150px;
-  }
+.timer-container {
+  background-color: white;
+  padding: 10px;
+  width: 120px;
+  height: 120px;
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
-@media screen and (min-width: 768px) {
-  .elapsed-time-container {
-    width: 200px;
-    height: 200px;
-  }
+.icon {
+  width: 20px;
+  height: 20px;
 }
-
-.elapsed-time {
-  color: #00d9f5;
-  font-family: 'Roboto';
+.timer {
   font-size: 28px;
+  font-family: 'Roboto';
   font-weight: bold;
-  margin: 0px;
+  color: #00d9f5;
 }
-
-@media screen and (min-width: 768px) {
-  .elapsed-time {
-    font-size: 48px;
-  }
-}
-
 .timer-state {
-  color: #1e293b;
+  font-size: 18px;
   font-family: 'Roboto';
-  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+.modify-container {
+  width: 50%;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.states-containers {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60%;
+}
+.icon-state-container {
+  display: flex;
+  flex-direction: row;
+}
+.icon-button {
+  background-color: transparent;
+  border: none;
+}
+.state-name {
+  font-size: 20px;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: #1e293b;
+}
+.set-timer-para {
+  font-size: 17px;
+  font-family: 'Roboto';
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.minus-button {
+  color: #0f172a;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
   font-weight: bold;
-  margin: 0px;
 }
-
-@media screen and (min-width: 768px) {
-  .timer-state {
-    font-size: 24px;
-  }
-}
-
-.controls-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.timer-controller-container {
-  display: flex;
-  align-items: center;
-}
-
-.timer-controller-btn {
-  display: flex;
-  align-items: center;
-  background-color: transparent;
+.number-button {
   border: none;
-  margin-right: 16px;
-  margin-left: 16px;
-  padding: 0px;
-  cursor: pointer;
-  outline: none;
+
+  font-size: 30px;
+  font-weight: bold;
+  color: #0f172a;
+  padding: 10px;
+  border-radius: 7px;
+  width: 70px;
+  background-color: #00d9f5;
 }
 
-.timer-controller-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-}
-
-@media (min-width: 576px) {
-  .timer-controller-icon {
-    width: 36px;
-    height: 36px;
-    margin-right: 12px;
+@media screen and (max-width: 576px) {
+  .card-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
   }
-}
-
-.timer-controller-label {
-  color: #1e293b;
-  font-family: 'Roboto';
-  font-size: 24px;
-  font-weight: 500;
-}
-
-@media (min-width: 576px) {
-  .timer-controller-label {
-    font-size: 32px;
+  .timer-bg-container {
+    width: 100%;
+    margin-top: 0px;
   }
-}
-
-.timer-limit-controller-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.limit-label {
-  color: #1e293b;
-  font-family: 'Roboto';
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.timer-limit-controller {
-  display: flex;
-  align-items: center;
-}
-
-.limit-controller-button {
-  color: #1e293b;
-  background-color: transparent;
-  font-family: 'Roboto';
-  font-size: 40px;
-  font-weight: 500;
-  border: none;
-  margin: 8px;
-  cursor: pointer;
-  outline: none;
-}
-
-.limit-label-and-value-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 8px;
-}
-
-.limit-value {
-  text-align: center;
-  color: #1e293b;
-  background-image: linear-gradient(to right, #00f5a0, #00d9f5);
-  font-family: 'Roboto';
-  font-size: 32px;
-  font-weight: 500;
-  width: 100px;
-  border-radius: 8px;
-  margin: 0px;
-  padding: 8px;
+  .modify-container {
+    margin-top: 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bg-container {
+    padding: 0px;
+  }
 }
